@@ -474,6 +474,146 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "RF_Module:ESP32-WROOM-32"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1550,6 +1690,24 @@
 		)
 	)
 	(junction
+		(at 30.48 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2b84389f-a4cb-431f-991d-f217262241d4")
+	)
+	(junction
+		(at 30.48 17.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "511b7289-8b52-4972-bbf3-2889103cde30")
+	)
+	(junction
+		(at 15.24 21.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6562f652-104c-4631-bc3a-d55fe9765f3d")
+	)
+	(junction
 		(at 193.04 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1575,6 +1733,16 @@
 	)
 	(wire
 		(pts
+			(xy 30.48 17.78) (xy 64.77 17.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03f361ae-a498-4a27-9adf-2b7580870756")
+	)
+	(wire
+		(pts
 			(xy 176.53 110.49) (xy 172.72 110.49)
 		)
 		(stroke
@@ -1582,6 +1750,26 @@
 			(type default)
 		)
 		(uuid "073aa12b-9a1f-4933-8444-bac3b6684b52")
+	)
+	(wire
+		(pts
+			(xy 30.48 88.9) (xy 30.48 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a210a4e-9f70-4ac6-8daa-4bd493412aa0")
+	)
+	(wire
+		(pts
+			(xy 12.7 49.53) (xy 12.7 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20c2b919-bc72-42d3-87ed-cd78f30415f0")
 	)
 	(wire
 		(pts
@@ -1605,6 +1793,16 @@
 	)
 	(wire
 		(pts
+			(xy 30.48 90.17) (xy 30.48 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "318bd5e2-2e4f-4c27-b25a-afe45a95402b")
+	)
+	(wire
+		(pts
 			(xy 129.54 109.22) (xy 137.16 109.22)
 		)
 		(stroke
@@ -1612,6 +1810,16 @@
 			(type default)
 		)
 		(uuid "3bc66c35-0b6a-45d8-b698-d20ae32b5e17")
+	)
+	(wire
+		(pts
+			(xy 22.86 16.51) (xy 30.48 16.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b08389e-446b-448d-a581-deb4a35c09b7")
 	)
 	(wire
 		(pts
@@ -1632,6 +1840,16 @@
 			(type default)
 		)
 		(uuid "4e5b880e-3d26-46ca-b756-d64e300d9edb")
+	)
+	(wire
+		(pts
+			(xy 12.7 90.17) (xy 30.48 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "520956d9-3a6c-4d30-8d6b-afff5484c598")
 	)
 	(wire
 		(pts
@@ -1665,6 +1883,16 @@
 	)
 	(wire
 		(pts
+			(xy 15.24 21.59) (xy 15.24 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67b0f1cd-d021-4703-bad1-2ce7b0875922")
+	)
+	(wire
+		(pts
 			(xy 162.56 99.06) (xy 176.53 99.06)
 		)
 		(stroke
@@ -1675,6 +1903,26 @@
 	)
 	(wire
 		(pts
+			(xy 13.97 21.59) (xy 13.97 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82e7f323-da04-4bd1-8136-d37bf8ac579f")
+	)
+	(wire
+		(pts
+			(xy 13.97 21.59) (xy 15.24 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85472d2f-ffa4-4a6d-9e44-ba215fa4219b")
+	)
+	(wire
+		(pts
 			(xy 193.04 113.03) (xy 193.04 110.49)
 		)
 		(stroke
@@ -1682,6 +1930,36 @@
 			(type default)
 		)
 		(uuid "85d26cb0-4c6b-41fa-9adf-75a163608317")
+	)
+	(wire
+		(pts
+			(xy 13.97 38.1) (xy 15.24 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a03e3fdf-9c6b-4d98-b85b-8e825e2901a6")
+	)
+	(wire
+		(pts
+			(xy 30.48 16.51) (xy 30.48 17.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a522e3cb-7149-400d-9b93-d1a740c3975b")
+	)
+	(wire
+		(pts
+			(xy 15.24 45.72) (xy 15.24 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5854f72-530a-41a8-a972-947418634201")
 	)
 	(wire
 		(pts
@@ -1705,6 +1983,16 @@
 	)
 	(wire
 		(pts
+			(xy 15.24 16.51) (xy 15.24 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac6f00eb-5280-4e44-8742-606083ad087f")
+	)
+	(wire
+		(pts
 			(xy 162.56 109.22) (xy 170.18 109.22)
 		)
 		(stroke
@@ -1712,6 +2000,16 @@
 			(type default)
 		)
 		(uuid "e2a5257c-1f59-4c6e-b512-0403915e0ee6")
+	)
+	(wire
+		(pts
+			(xy 15.24 49.53) (xy 12.7 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec851c0a-1568-4104-a1aa-1693db0e26f2")
 	)
 	(label "+3V3"
 		(at 207.01 102.87 0)
@@ -1732,6 +2030,16 @@
 			(justify right bottom)
 		)
 		(uuid "34bb9272-84f9-4ab3-bec4-e3e0c8e5d9d5")
+	)
+	(label "+3V3"
+		(at 64.77 17.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3d96c5ab-8888-49e1-a15f-5b216267200d")
 	)
 	(label "96V_POS"
 		(at 129.54 99.06 180)
@@ -1834,7 +2142,7 @@
 			(uuid "18269259-f377-48fc-a063-a3c7317b81b5")
 		)
 		(instances
-			(project "carenginefuckyouwin11"
+			(project "CarEngine"
 				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
 					(reference "#PWR01")
 					(unit 1)
@@ -1916,7 +2224,7 @@
 			(uuid "cbf7c364-1da4-4616-81ab-0c673a5543f4")
 		)
 		(instances
-			(project "carenginefuckyouwin11"
+			(project "CarEngine"
 				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
 					(reference "C1")
 					(unit 1)
@@ -2002,7 +2310,7 @@
 			(uuid "730ab68d-7143-4bb0-b7a4-cbed418847fe")
 		)
 		(instances
-			(project "carenginefuckyouwin11"
+			(project "CarEngine"
 				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
 					(reference "U1")
 					(unit 1)
@@ -2195,7 +2503,7 @@
 			(uuid "42428174-8be1-4924-96e6-552538172dcd")
 		)
 		(instances
-			(project "carenginefuckyouwin11"
+			(project "CarEngine"
 				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
 					(reference "U3")
 					(unit 1)
@@ -2278,7 +2586,7 @@
 			(uuid "49b4f38a-753d-47b0-b0aa-c5826f756414")
 		)
 		(instances
-			(project "carenginefuckyouwin11"
+			(project "CarEngine"
 				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
 					(reference "U2")
 					(unit 1)
@@ -2360,9 +2668,249 @@
 			(uuid "5bf4427e-484c-484d-bdcd-5d36cbaed530")
 		)
 		(instances
-			(project "carenginefuckyouwin11"
+			(project "CarEngine"
 				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
 					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 15.24 41.91 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "57ef72ec-c754-4455-bfba-193a8ae21878")
+		(property "Reference" "C3"
+			(at 19.05 40.6399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 19.05 43.1799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 16.2052 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 15.24 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 15.24 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "7fd3f2ad-1df1-4976-8db1-ab3ce9627bdc")
+		)
+		(pin "1"
+			(uuid "8261152e-fcf2-4f4a-8f2b-1e63a9681115")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 19.05 16.51 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d196b7ee-7146-482e-8f1f-28396028ccd0")
+		(property "Reference" "R1"
+			(at 19.05 10.16 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 19.05 12.7 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 19.05 14.732 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 19.05 16.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 19.05 16.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4a021f34-cbb7-4e90-8d7d-013e509e9e4d")
+		)
+		(pin "2"
+			(uuid "0aff80db-057a-4021-9383-e2d5987a083d")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 30.48 96.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fd8131d2-2968-436b-b5a8-3789bb1bf346")
+		(property "Reference" "#PWR02"
+			(at 30.48 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 30.48 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 30.48 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 30.48 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c03003a2-4183-440f-867f-ef41e49b38df")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
