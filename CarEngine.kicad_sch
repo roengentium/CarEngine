@@ -1733,6 +1733,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 40.64) (xy 58.42 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02d566e6-4450-410e-9794-f106273bbfaa")
+	)
+	(wire
+		(pts
 			(xy 30.48 17.78) (xy 64.77 17.78)
 		)
 		(stroke
@@ -1903,6 +1913,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 68.58) (xy 58.42 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76de4a85-4a3f-4176-82eb-ff289e7d5e4b")
+	)
+	(wire
+		(pts
 			(xy 13.97 21.59) (xy 13.97 38.1)
 		)
 		(stroke
@@ -1930,6 +1950,16 @@
 			(type default)
 		)
 		(uuid "85d26cb0-4c6b-41fa-9adf-75a163608317")
+	)
+	(wire
+		(pts
+			(xy 45.72 38.1) (xy 58.42 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b39d303-2b79-44ea-9f12-d950edcf1c5c")
 	)
 	(wire
 		(pts
@@ -1963,6 +1993,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 66.04) (xy 58.42 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6f26acf-8a35-4f81-b9c2-8a7a8a53e458")
+	)
+	(wire
+		(pts
 			(xy 207.01 102.87) (xy 207.01 105.41)
 		)
 		(stroke
@@ -1990,6 +2030,36 @@
 			(type default)
 		)
 		(uuid "ac6f00eb-5280-4e44-8742-606083ad087f")
+	)
+	(wire
+		(pts
+			(xy 45.72 45.72) (xy 58.42 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "baab2fc8-d414-4cf6-8695-48c6e3466434")
+	)
+	(wire
+		(pts
+			(xy 45.72 43.18) (xy 58.42 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9944e10-4d8d-4d7e-8dff-b56d3e6ad53e")
+	)
+	(wire
+		(pts
+			(xy 45.72 33.02) (xy 58.42 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc9a3803-0eeb-4eaf-997c-abb285dd562e")
 	)
 	(wire
 		(pts
@@ -2021,6 +2091,16 @@
 		)
 		(uuid "0f81eec4-9d9b-4a96-ac2c-a502146704a5")
 	)
+	(label "PWM_B_L"
+		(at 58.42 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "28f4b3a9-469e-4a0c-b526-e40e9f40abf4")
+	)
 	(label "+12V"
 		(at 176.53 102.87 180)
 		(effects
@@ -2041,6 +2121,26 @@
 		)
 		(uuid "3d96c5ab-8888-49e1-a15f-5b216267200d")
 	)
+	(label "PWM_B_H"
+		(at 58.42 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "41a11de6-7ac3-4bb0-a253-32e1daa4f020")
+	)
+	(label "PWM_A_L"
+		(at 58.42 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5efb8f18-97a2-4c67-8ca9-ff5fa3f37d95")
+	)
 	(label "96V_POS"
 		(at 129.54 99.06 180)
 		(effects
@@ -2050,6 +2150,16 @@
 			(justify right bottom)
 		)
 		(uuid "67dbe87f-21e7-4419-9f2e-cf4dbe7146a0")
+	)
+	(label "PWM_C_H"
+		(at 58.42 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6a2bd76c-bb47-48ab-bede-4e8382869862")
 	)
 	(label "96V_NEG"
 		(at 129.54 109.22 180)
@@ -2061,6 +2171,16 @@
 		)
 		(uuid "70241306-0354-4635-a41c-d1db01183c83")
 	)
+	(label "PWM_A_H"
+		(at 58.42 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a22321f4-c8db-415c-9c65-b04dfa7f47e3")
+	)
 	(label "+12V"
 		(at 170.18 99.06 0)
 		(effects
@@ -2070,6 +2190,36 @@
 			(justify left bottom)
 		)
 		(uuid "a4322da3-d650-414d-934e-894945e74973")
+	)
+	(label "PWM_C_H"
+		(at 58.42 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cccf953d-680e-4032-a7bd-cca954792d3b")
+	)
+	(label "PWM_C_L"
+		(at 58.42 68.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d2907bbc-dd98-4313-a81b-4f50b241d9b5")
+	)
+	(label "INV_FAULT"
+		(at 58.42 33.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f7ca76db-13a0-4b4d-b978-6a732ecad02c")
 	)
 	(symbol
 		(lib_id "power:GND")
