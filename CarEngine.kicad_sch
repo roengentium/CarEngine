@@ -614,6 +614,438 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Diode:1N4148"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1N4148"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "100V 0.15A standard switching diode, DO-35"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "D*DO?35*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "1N4148_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "1N4148_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Driver_FET:IR2101"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 1.27 13.335 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "IR2101"
+				(at 1.27 11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.infineon.com/dgdl/ir2101.pdf?fileId=5546d462533600a4015355c7a755166c"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "High and Low Side Driver, 600V, 210/360mA, PDIP-8/SOIC-8"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Gate Driver"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "IR2101_0_1"
+				(rectangle
+					(start -5.08 -10.16)
+					(end 5.08 10.16)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "IR2101_1_1"
+				(pin power_in line
+					(at 0 12.7 270)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "HIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "LIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -12.7 90)
+					(length 2.54)
+					(name "COM"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 -7.62 180)
+					(length 2.54)
+					(name "LO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -5.08 180)
+					(length 2.54)
+					(name "VS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 5.08 180)
+					(length 2.54)
+					(name "HO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 7.62 180)
+					(length 2.54)
+					(name "VB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "RF_Module:ESP32-WROOM-32"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1573,6 +2005,307 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Transistor_FET:Q_NMOS_GDS"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Q_NMOS_GDS"
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "N-MOSFET transistor, gate/drain/source"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "transistor NMOS N-MOS N-MOSFET"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Q_NMOS_GDS_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.921 0.381) (xy 3.683 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Q_NMOS_GDS_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:GND"
 			(power global)
 			(pin_numbers
@@ -1690,6 +2423,42 @@
 		)
 	)
 	(junction
+		(at 132.08 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0822e9d8-b627-4c27-96ae-ff9f208aebce")
+	)
+	(junction
+		(at 166.37 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0e2a833b-ec2f-4ae4-bfd1-ced940304da8")
+	)
+	(junction
+		(at 156.21 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1134bf60-c2da-42aa-b70b-8d0e078a9c1c")
+	)
+	(junction
+		(at 146.05 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "12cdcf93-c252-4fff-9a78-9127f0782dc4")
+	)
+	(junction
+		(at 130.81 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "14986202-f5a1-4f68-8570-03503de26fd5")
+	)
+	(junction
+		(at 156.21 21.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1f98b468-d1e5-4f4e-8c1f-93a07364c78c")
+	)
+	(junction
 		(at 30.48 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1702,16 +2471,40 @@
 		(uuid "511b7289-8b52-4972-bbf3-2889103cde30")
 	)
 	(junction
+		(at 142.24 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "519df7d7-b0de-46c7-a503-96470dff7390")
+	)
+	(junction
 		(at 15.24 21.59)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6562f652-104c-4631-bc3a-d55fe9765f3d")
 	)
 	(junction
+		(at 158.75 41.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "798b784a-e8a1-404c-a721-6af3b9f02fe2")
+	)
+	(junction
 		(at 193.04 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7c556335-c708-452c-a375-a5f84671e0d4")
+	)
+	(junction
+		(at 176.53 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a35ded11-424f-4962-8773-25d57bae40f4")
+	)
+	(junction
+		(at 142.24 21.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a9c1329d-4c33-4371-be76-52ebc4a24520")
 	)
 	(junction
 		(at 176.53 102.87)
@@ -1730,6 +2523,16 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d1b5a016-8deb-45d7-ae2d-7cb145f2c00b")
+	)
+	(wire
+		(pts
+			(xy 142.24 71.12) (xy 148.59 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00e9f1e5-339d-4616-a8b4-bbb8e564d54d")
 	)
 	(wire
 		(pts
@@ -1753,6 +2556,16 @@
 	)
 	(wire
 		(pts
+			(xy 113.03 22.86) (xy 113.03 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06969277-a038-4f2b-8068-fa1fdff3eab7")
+	)
+	(wire
+		(pts
 			(xy 176.53 110.49) (xy 172.72 110.49)
 		)
 		(stroke
@@ -1760,6 +2573,26 @@
 			(type default)
 		)
 		(uuid "073aa12b-9a1f-4933-8444-bac3b6684b52")
+	)
+	(wire
+		(pts
+			(xy 179.07 35.56) (xy 176.53 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "084e3512-a364-46f3-9f5d-b95b51627bdf")
+	)
+	(wire
+		(pts
+			(xy 156.21 63.5) (xy 156.21 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08d469c9-0d25-410f-9d29-ee97f97e180c")
 	)
 	(wire
 		(pts
@@ -1773,6 +2606,16 @@
 	)
 	(wire
 		(pts
+			(xy 176.53 46.99) (xy 146.05 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0da42410-5ce0-4a34-9a96-b3e6383f0116")
+	)
+	(wire
+		(pts
 			(xy 12.7 49.53) (xy 12.7 90.17)
 		)
 		(stroke
@@ -1780,6 +2623,16 @@
 			(type default)
 		)
 		(uuid "20c2b919-bc72-42d3-87ed-cd78f30415f0")
+	)
+	(wire
+		(pts
+			(xy 142.24 59.69) (xy 156.21 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "217b5f0a-6f1c-4a1e-a054-7e69a13c8792")
 	)
 	(wire
 		(pts
@@ -1793,6 +2646,16 @@
 	)
 	(wire
 		(pts
+			(xy 130.81 59.69) (xy 142.24 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2707502c-8f70-48d2-b83b-6acc1c2a61e5")
+	)
+	(wire
+		(pts
 			(xy 176.53 99.06) (xy 176.53 102.87)
 		)
 		(stroke
@@ -1800,6 +2663,26 @@
 			(type default)
 		)
 		(uuid "29fbfd6c-3c94-4eae-9c7d-badc486e9402")
+	)
+	(wire
+		(pts
+			(xy 162.56 53.34) (xy 166.37 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a3cd00f-ac99-496f-90ea-fdbf6a88b11c")
+	)
+	(wire
+		(pts
+			(xy 163.83 78.74) (xy 163.83 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fc1b3b3-f305-4741-be04-7089db61dc71")
 	)
 	(wire
 		(pts
@@ -1813,6 +2696,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 48.26) (xy 134.62 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32c1660d-9e35-47f7-9c75-2771761d62ac")
+	)
+	(wire
+		(pts
 			(xy 129.54 109.22) (xy 137.16 109.22)
 		)
 		(stroke
@@ -1820,6 +2713,26 @@
 			(type default)
 		)
 		(uuid "3bc66c35-0b6a-45d8-b698-d20ae32b5e17")
+	)
+	(wire
+		(pts
+			(xy 167.64 44.45) (xy 152.4 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ea4ddf2-c736-45ed-b47b-0e0dbe42dfb3")
+	)
+	(wire
+		(pts
+			(xy 170.18 45.72) (xy 170.18 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43c72fc2-58c4-4840-adb7-9861652a2c64")
 	)
 	(wire
 		(pts
@@ -1833,6 +2746,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 59.69) (xy 168.91 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b5e971a-63ed-4f08-a079-d52ba074b8dd")
+	)
+	(wire
+		(pts
 			(xy 207.01 113.03) (xy 193.04 113.03)
 		)
 		(stroke
@@ -1843,6 +2766,26 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 35.56) (xy 134.62 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ca642b0-1afd-4c65-a8c1-a242269dcc81")
+	)
+	(wire
+		(pts
+			(xy 158.75 31.75) (xy 158.75 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d4e216e-e9b1-42e5-ba13-a041d9dabf65")
+	)
+	(wire
+		(pts
 			(xy 193.04 110.49) (xy 176.53 110.49)
 		)
 		(stroke
@@ -1850,6 +2793,16 @@
 			(type default)
 		)
 		(uuid "4e5b880e-3d26-46ca-b756-d64e300d9edb")
+	)
+	(wire
+		(pts
+			(xy 179.07 33.02) (xy 167.64 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "508da861-074b-4e09-b8f4-393762bd6b83")
 	)
 	(wire
 		(pts
@@ -1883,6 +2836,36 @@
 	)
 	(wire
 		(pts
+			(xy 134.62 43.18) (xy 137.16 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59d74edc-8e45-4c35-9e82-6187ddc9905b")
+	)
+	(wire
+		(pts
+			(xy 151.13 40.64) (xy 151.13 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5cdbbb57-e9e1-4d82-bca5-4b2c4f62044b")
+	)
+	(wire
+		(pts
+			(xy 171.45 44.45) (xy 171.45 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f3d32d6-e5c6-4e16-91ed-3df02e2b2a19")
+	)
+	(wire
+		(pts
 			(xy 200.66 102.87) (xy 207.01 102.87)
 		)
 		(stroke
@@ -1893,6 +2876,66 @@
 	)
 	(wire
 		(pts
+			(xy 176.53 35.56) (xy 176.53 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "610fbcfb-c9df-4882-b50b-63d6c31e0366")
+	)
+	(wire
+		(pts
+			(xy 130.81 44.45) (xy 130.81 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "664ffb11-e829-4109-89b8-4c26c24843ee")
+	)
+	(wire
+		(pts
+			(xy 170.18 40.64) (xy 151.13 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66552937-97ae-4ed5-8190-bc06e6700ead")
+	)
+	(wire
+		(pts
+			(xy 172.72 43.18) (xy 163.83 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "669afa9d-c925-4519-9d8e-efd5d6125625")
+	)
+	(wire
+		(pts
+			(xy 120.65 33.02) (xy 123.19 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66eadfb9-255b-4c2a-8483-b294478984d9")
+	)
+	(wire
+		(pts
+			(xy 179.07 45.72) (xy 170.18 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67618050-bb9e-4704-aa8d-7a3859561351")
+	)
+	(wire
+		(pts
 			(xy 15.24 21.59) (xy 15.24 22.86)
 		)
 		(stroke
@@ -1900,6 +2943,46 @@
 			(type default)
 		)
 		(uuid "67b0f1cd-d021-4703-bad1-2ce7b0875922")
+	)
+	(wire
+		(pts
+			(xy 156.21 50.8) (xy 156.21 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68493948-ca18-4b61-8983-bdc85257fb1d")
+	)
+	(wire
+		(pts
+			(xy 113.03 53.34) (xy 113.03 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6cc8f14d-2f95-4d8b-baa3-fcd230ecbf51")
+	)
+	(wire
+		(pts
+			(xy 134.62 39.37) (xy 137.16 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d7bc495-8dfa-47f8-bfc3-1a5b0d8c9d3f")
+	)
+	(wire
+		(pts
+			(xy 171.45 36.83) (xy 176.53 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ef976ce-23cb-4ccd-8ae6-a8bbaf9c85de")
 	)
 	(wire
 		(pts
@@ -1923,6 +3006,56 @@
 	)
 	(wire
 		(pts
+			(xy 173.99 71.12) (xy 180.34 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7bf80935-d3a6-4d4e-af38-0a58214a5cfd")
+	)
+	(wire
+		(pts
+			(xy 134.62 35.56) (xy 134.62 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ddefee8-c742-4243-b219-69f5b3c8c435")
+	)
+	(wire
+		(pts
+			(xy 157.48 39.37) (xy 163.83 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7facc72e-faf6-4a30-9fe9-5670fca8c932")
+	)
+	(wire
+		(pts
+			(xy 166.37 63.5) (xy 166.37 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8220a9a3-d985-45fa-b0a5-0b20b12142dd")
+	)
+	(wire
+		(pts
+			(xy 168.91 50.8) (xy 168.91 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82509c18-fbc1-4f57-8adf-daeb5823a30c")
+	)
+	(wire
+		(pts
 			(xy 13.97 21.59) (xy 13.97 38.1)
 		)
 		(stroke
@@ -1930,6 +3063,26 @@
 			(type default)
 		)
 		(uuid "82e7f323-da04-4bd1-8136-d37bf8ac579f")
+	)
+	(wire
+		(pts
+			(xy 152.4 43.18) (xy 151.13 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "842462e9-4384-46b8-9611-5241d4da1882")
+	)
+	(wire
+		(pts
+			(xy 130.81 45.72) (xy 132.08 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84ac7518-c08a-43a0-85d8-8af901ee693a")
 	)
 	(wire
 		(pts
@@ -1953,6 +3106,56 @@
 	)
 	(wire
 		(pts
+			(xy 157.48 62.23) (xy 157.48 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89c1bd2d-f912-413a-8b49-b092c1d750b7")
+	)
+	(wire
+		(pts
+			(xy 161.29 78.74) (xy 161.29 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8dd9a22a-652d-45c6-9b78-f1fddbb95750")
+	)
+	(wire
+		(pts
+			(xy 153.67 53.34) (xy 154.94 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ea1c842-54ca-4cbb-a7b5-6e3390f2a9e4")
+	)
+	(wire
+		(pts
+			(xy 168.91 21.59) (xy 168.91 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9350e52f-5e26-44af-94de-bf05f6c83758")
+	)
+	(wire
+		(pts
+			(xy 168.91 63.5) (xy 172.72 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9511d0ca-73f8-4e45-85a9-e12597b10258")
+	)
+	(wire
+		(pts
 			(xy 45.72 38.1) (xy 58.42 38.1)
 		)
 		(stroke
@@ -1963,6 +3166,26 @@
 	)
 	(wire
 		(pts
+			(xy 100.33 43.18) (xy 105.41 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b9eb91c-2790-4352-a93a-893df480793c")
+	)
+	(wire
+		(pts
+			(xy 132.08 31.75) (xy 132.08 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f6401d5-63b9-4e17-aabe-cfbd2b9ce2ee")
+	)
+	(wire
+		(pts
 			(xy 13.97 38.1) (xy 15.24 38.1)
 		)
 		(stroke
@@ -1970,6 +3193,16 @@
 			(type default)
 		)
 		(uuid "a03e3fdf-9c6b-4d98-b85b-8e825e2901a6")
+	)
+	(wire
+		(pts
+			(xy 142.24 21.59) (xy 156.21 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3098929-e399-49a1-b61f-8ce01e4204f1")
 	)
 	(wire
 		(pts
@@ -2033,6 +3266,56 @@
 	)
 	(wire
 		(pts
+			(xy 153.67 60.96) (xy 153.67 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac899894-c92c-45d5-a6cf-b32f68b29371")
+	)
+	(wire
+		(pts
+			(xy 156.21 62.23) (xy 157.48 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad5faf5a-95ff-4e33-ab1f-eb16d29bbc37")
+	)
+	(wire
+		(pts
+			(xy 130.81 21.59) (xy 142.24 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0770268-7fb7-453f-9e34-20ba1cb8944e")
+	)
+	(wire
+		(pts
+			(xy 146.05 31.75) (xy 146.05 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9bbc5ab-6971-4c10-a3b8-f58c8dd4c443")
+	)
+	(wire
+		(pts
+			(xy 156.21 21.59) (xy 168.91 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9fb3b21-9323-455d-bd3b-012e13380480")
+	)
+	(wire
+		(pts
 			(xy 45.72 45.72) (xy 58.42 45.72)
 		)
 		(stroke
@@ -2040,6 +3323,26 @@
 			(type default)
 		)
 		(uuid "baab2fc8-d414-4cf6-8695-48c6e3466434")
+	)
+	(wire
+		(pts
+			(xy 176.53 36.83) (xy 176.53 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2d41ade-b5e9-4ce6-ae6c-e21af3d66f41")
+	)
+	(wire
+		(pts
+			(xy 194.31 40.64) (xy 200.66 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c39645be-8bd8-4b7d-995d-96690ae3ea1a")
 	)
 	(wire
 		(pts
@@ -2053,6 +3356,46 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 45.72) (xy 132.08 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb39a71b-33ad-4602-b33f-2f32b72e2ce8")
+	)
+	(wire
+		(pts
+			(xy 158.75 41.91) (xy 158.75 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbeb8c85-f027-4aac-bc8d-32a6841bd004")
+	)
+	(wire
+		(pts
+			(xy 194.31 38.1) (xy 200.66 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf18686f-d753-4532-b111-37ef61524adc")
+	)
+	(wire
+		(pts
+			(xy 152.4 44.45) (xy 152.4 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d13f214e-861a-4c37-acc0-84f02bdca705")
+	)
+	(wire
+		(pts
 			(xy 45.72 33.02) (xy 58.42 33.02)
 		)
 		(stroke
@@ -2060,6 +3403,16 @@
 			(type default)
 		)
 		(uuid "dc9a3803-0eeb-4eaf-997c-abb285dd562e")
+	)
+	(wire
+		(pts
+			(xy 130.81 33.02) (xy 130.81 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de059a4e-cae2-44e9-817c-091dd227a138")
 	)
 	(wire
 		(pts
@@ -2073,6 +3426,26 @@
 	)
 	(wire
 		(pts
+			(xy 166.37 53.34) (xy 166.37 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e580d499-c4ab-4c8f-8105-ee871df308f6")
+	)
+	(wire
+		(pts
+			(xy 100.33 40.64) (xy 105.41 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eafcd11e-8666-4199-98f2-79b44448563f")
+	)
+	(wire
+		(pts
 			(xy 15.24 49.53) (xy 12.7 49.53)
 		)
 		(stroke
@@ -2080,6 +3453,126 @@
 			(type default)
 		)
 		(uuid "ec851c0a-1568-4104-a1aa-1693db0e26f2")
+	)
+	(wire
+		(pts
+			(xy 167.64 33.02) (xy 167.64 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed937d44-2f0c-4562-b783-234df4eba9f4")
+	)
+	(wire
+		(pts
+			(xy 156.21 21.59) (xy 156.21 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef95440c-2b49-48cb-b165-4eaea243b852")
+	)
+	(wire
+		(pts
+			(xy 142.24 50.8) (xy 142.24 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f14dba72-1d17-40a6-846a-f9d8e4dcc8fc")
+	)
+	(wire
+		(pts
+			(xy 134.62 48.26) (xy 134.62 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f53d0576-de48-4a12-8117-5c960418fa83")
+	)
+	(wire
+		(pts
+			(xy 142.24 21.59) (xy 142.24 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5cf0507-a041-4616-9be1-db470a9b646f")
+	)
+	(wire
+		(pts
+			(xy 120.65 45.72) (xy 130.81 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f67c3bc2-c92d-42e5-a5b6-73f89ab8582d")
+	)
+	(wire
+		(pts
+			(xy 172.72 63.5) (xy 172.72 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7a7b742-d640-478d-ba6b-47ae4afcd1a3")
+	)
+	(wire
+		(pts
+			(xy 186.69 57.15) (xy 186.69 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7b56add-6d33-4f4a-9902-3ad133a8b53c")
+	)
+	(wire
+		(pts
+			(xy 186.69 27.94) (xy 186.69 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb57dc61-fa71-4380-9a80-96bfac362417")
+	)
+	(wire
+		(pts
+			(xy 146.05 46.99) (xy 146.05 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbd4b873-bffb-49e3-b03a-c535d28cb8a8")
+	)
+	(wire
+		(pts
+			(xy 166.37 41.91) (xy 158.75 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdc7c872-886e-4552-ad46-da2936d31846")
+	)
+	(label "PWM_C_L"
+		(at 163.83 83.82 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "0eda9d0a-a6c9-40c3-85fd-e73d6b616d0d")
 	)
 	(label "+3V3"
 		(at 207.01 102.87 0)
@@ -2100,6 +3593,16 @@
 			(justify left bottom)
 		)
 		(uuid "28f4b3a9-469e-4a0c-b526-e40e9f40abf4")
+	)
+	(label "+12V"
+		(at 142.24 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "318decf2-52dd-4e97-9157-f21d139e9eaf")
 	)
 	(label "+12V"
 		(at 176.53 102.87 180)
@@ -2130,6 +3633,56 @@
 			(justify left bottom)
 		)
 		(uuid "41a11de6-7ac3-4bb0-a253-32e1daa4f020")
+	)
+	(label "PWM_B_H"
+		(at 200.66 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "43b8f7bc-bf30-465f-9a29-1975e8b8bb6e")
+	)
+	(label "GND"
+		(at 113.03 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "47c50b85-8066-4683-9f9a-a3c2f0ecc8ee")
+	)
+	(label "PHASE_C"
+		(at 158.75 41.91 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "516881fc-8ae5-4f9d-9b2c-f05925f70bcd")
+	)
+	(label "PWM_A_H"
+		(at 100.33 40.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5189cb2b-a10c-4fd2-9b02-df0901d458a5")
+	)
+	(label "PWM_B_L"
+		(at 200.66 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5abb324d-69c5-41f8-bf3d-4bcb9f713513")
 	)
 	(label "PWM_A_L"
 		(at 58.42 38.1 0)
@@ -2171,6 +3724,46 @@
 		)
 		(uuid "70241306-0354-4635-a41c-d1db01183c83")
 	)
+	(label "96V_NEG"
+		(at 130.81 59.69 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7097eba4-9750-47e1-a570-b3b8ce1c02fc")
+	)
+	(label "GND"
+		(at 180.34 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "79892898-0669-4154-ac16-1ec2d49273aa")
+	)
+	(label "PHASE_A"
+		(at 132.08 41.91 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8d2aeb61-91c5-4d51-9eba-a87f85a444c6")
+	)
+	(label "+12V"
+		(at 113.03 22.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8eea3cef-2828-4a57-8b49-9ea2fdf77f6a")
+	)
 	(label "PWM_A_H"
 		(at 58.42 43.18 0)
 		(effects
@@ -2191,6 +3784,16 @@
 		)
 		(uuid "a4322da3-d650-414d-934e-894945e74973")
 	)
+	(label "PWM_A_L"
+		(at 100.33 43.18 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c993dda4-07fb-4b1c-aec4-5e004a18f01a")
+	)
 	(label "PWM_C_H"
 		(at 58.42 66.04 0)
 		(effects
@@ -2200,6 +3803,16 @@
 			(justify left bottom)
 		)
 		(uuid "cccf953d-680e-4032-a7bd-cca954792d3b")
+	)
+	(label "96V_POS"
+		(at 130.81 21.59 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "cf5e238a-3191-492e-9508-dad3349c2baa")
 	)
 	(label "PWM_C_L"
 		(at 58.42 68.58 0)
@@ -2211,6 +3824,46 @@
 		)
 		(uuid "d2907bbc-dd98-4313-a81b-4f50b241d9b5")
 	)
+	(label "PWM_C_H"
+		(at 161.29 83.82 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e21fb301-36cd-4e00-bd77-9c00220e47f6")
+	)
+	(label "+12V"
+		(at 186.69 57.15 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e284c1e6-3820-4c17-a807-973b34ab41ff")
+	)
+	(label "PHASE_B"
+		(at 146.05 41.91 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e3d59598-a678-4167-bcf4-255040fa9d13")
+	)
+	(label "GND"
+		(at 186.69 24.13 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ebc5cbcd-d155-4c14-b66e-3327369d6a55")
+	)
 	(label "INV_FAULT"
 		(at 58.42 33.02 0)
 		(effects
@@ -2220,6 +3873,172 @@
 			(justify left bottom)
 		)
 		(uuid "f7ca76db-13a0-4b4d-b978-6a732ecad02c")
+	)
+	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GDS")
+		(at 163.83 48.26 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "25751544-fd87-4523-9faf-92443aa57086")
+		(property "Reference" "Q6"
+			(at 163.83 54.61 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Q_NMOS_GDS"
+			(at 163.83 57.15 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+			(at 166.37 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 163.83 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/drain/source"
+			(at 163.83 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "59972b51-08d8-47d8-b81b-fe6af4d70665")
+		)
+		(pin "2"
+			(uuid "4d7c8f5f-c9ba-4acb-983f-9d458321980a")
+		)
+		(pin "3"
+			(uuid "89b57ea7-8f8e-4bc9-b95e-4018b7785c8d")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "Q6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GDS")
+		(at 137.16 48.26 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "29640d8e-3f13-497e-ae3b-32a9f887dce3")
+		(property "Reference" "Q2"
+			(at 137.16 54.61 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Q_NMOS_GDS"
+			(at 137.16 57.15 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+			(at 139.7 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/drain/source"
+			(at 137.16 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b8008dfe-b321-4a64-b712-41782504bda8")
+		)
+		(pin "2"
+			(uuid "0e8dac15-5f28-4e5d-8578-cf06560ad417")
+		)
+		(pin "3"
+			(uuid "5e838067-b50b-41f3-a4f9-f14697a204d5")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2295,6 +4114,107 @@
 			(project "CarEngine"
 				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Driver_FET:IR2101")
+		(at 113.03 40.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "37bb5d1b-0605-4079-bb5b-f6488674d130")
+		(property "Reference" "U4"
+			(at 115.1733 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "IR2101"
+			(at 115.1733 27.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+			(at 113.03 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/dgdl/ir2101.pdf?fileId=5546d462533600a4015355c7a755166c"
+			(at 113.03 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "High and Low Side Driver, 600V, 210/360mA, PDIP-8/SOIC-8"
+			(at 113.03 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "52f94f2c-8b0a-417c-8747-1718a16d07c1")
+		)
+		(pin "1"
+			(uuid "4d114907-0a3b-418b-9d1a-433dde637e2f")
+		)
+		(pin "3"
+			(uuid "8114b200-e419-4038-9a56-739121550c4f")
+		)
+		(pin "2"
+			(uuid "36343258-6334-4756-80f7-831f4560fbc5")
+		)
+		(pin "8"
+			(uuid "a6abac5b-2cde-48a3-ac28-24d4ceeeecc3")
+		)
+		(pin "5"
+			(uuid "05efc1a9-05c2-46d7-a362-312d6db59a8f")
+		)
+		(pin "6"
+			(uuid "611333b9-6de7-4218-af8a-4e7a5aa028e9")
+		)
+		(pin "7"
+			(uuid "ba87f56e-0f7a-4ed9-ae5c-d9d541becbe9")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -2463,6 +4383,108 @@
 			(project "CarEngine"
 				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148")
+		(at 175.26 48.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3e20176b-8541-461f-b54f-5bcbc0c218a3")
+		(property "Reference" "D2"
+			(at 175.26 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148"
+			(at 175.26 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 175.26 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
+			(at 175.26 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "100V 0.15A standard switching diode, DO-35"
+			(at 175.26 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 175.26 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 175.26 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "b63ed534-eb3f-40cc-ad24-cd4fe7d732d0")
+		)
+		(pin "1"
+			(uuid "2e770edf-47fc-49fa-9ae5-c8bdfacc3698")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -2662,6 +4684,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 130.81 40.64 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "44a033c9-7752-495e-94c5-804f11bab078")
+		(property "Reference" "C4"
+			(at 134.62 39.3699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1uF"
+			(at 134.62 41.9099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 129.8448 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 130.81 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 130.81 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "38e57664-b20a-41c0-80aa-5b5e6fc755e2")
+		)
+		(pin "2"
+			(uuid "5a8e1bd7-1db8-489a-a034-a127bd8259c1")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Regulator_Linear:AMS1117-3.3")
 		(at 193.04 102.87 0)
 		(unit 1)
@@ -2739,6 +4843,108 @@
 			(project "CarEngine"
 				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148")
+		(at 127 33.02 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4c92837e-29b4-4597-b53b-16b354587b1b")
+		(property "Reference" "D1"
+			(at 127 26.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148"
+			(at 127 29.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 127 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
+			(at 127 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "100V 0.15A standard switching diode, DO-35"
+			(at 127 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 127 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 127 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "24d51e67-8078-4b4c-a384-b5831fa79070")
+		)
+		(pin "1"
+			(uuid "4856b717-03c6-47a4-a963-af5660b45db6")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -2860,7 +5066,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm"
 			(at 16.2052 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -2909,6 +5115,539 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 158.75 53.34 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "75239f2c-eba4-4d2f-bf95-0661d983b367")
+		(property "Reference" "C6"
+			(at 158.75 45.72 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1uF"
+			(at 158.75 48.26 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 162.56 52.3748 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 158.75 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 158.75 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e2bdc1de-ec48-4b17-91cb-e7e0d9537b08")
+		)
+		(pin "2"
+			(uuid "3c8d3814-1214-4085-897a-4a22a8e97bfe")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148")
+		(at 153.67 57.15 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "79ebc668-68e5-46a4-beda-08d58e79d1c1")
+		(property "Reference" "D3"
+			(at 156.21 55.8799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1N4148"
+			(at 156.21 58.4199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 153.67 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
+			(at 153.67 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "100V 0.15A standard switching diode, DO-35"
+			(at 153.67 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 153.67 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 153.67 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "b47460d5-8057-4f8d-bae0-4c32db6281cb")
+		)
+		(pin "1"
+			(uuid "85e2fe92-0c82-45df-92d6-abd902c3c634")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GDS")
+		(at 137.16 34.29 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8a48d8ff-eded-43cc-a38e-6e0ac67d922a")
+		(property "Reference" "Q1"
+			(at 137.16 25.4 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Q_NMOS_GDS"
+			(at 137.16 27.94 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+			(at 134.62 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/drain/source"
+			(at 137.16 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a2f420b1-773b-45ea-9cad-1bdd67074c07")
+		)
+		(pin "2"
+			(uuid "90337e91-ae6d-4f13-bbfd-a8d30039f752")
+		)
+		(pin "3"
+			(uuid "270bd01e-14ef-4e6b-b9d0-cd8b877e804d")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 171.45 40.64 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8dd89b06-31da-4c3d-8c60-cbea821ae772")
+		(property "Reference" "C5"
+			(at 175.26 39.3699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1uF"
+			(at 175.26 41.9099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 170.4848 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 171.45 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 171.45 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "14a3bce5-87dd-4e60-b008-8b537920f1c7")
+		)
+		(pin "2"
+			(uuid "ffca28ee-fd12-44ae-bc95-4418fa9c1371")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GDS")
+		(at 151.13 48.26 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a1307b85-0152-495d-ad48-0d36b8705d0e")
+		(property "Reference" "Q4"
+			(at 151.13 54.61 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Q_NMOS_GDS"
+			(at 151.13 57.15 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+			(at 153.67 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/drain/source"
+			(at 151.13 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7a96cf4f-6d32-4719-981f-5743efde93fe")
+		)
+		(pin "2"
+			(uuid "c79e07e0-5a2f-4233-bb15-b542866c2e45")
+		)
+		(pin "3"
+			(uuid "916b19a9-e2e1-4f2e-ae00-6c77da0422f3")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Driver_FET:IR2101")
+		(at 186.69 40.64 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b231a262-2270-4b27-aa04-5e023de20868")
+		(property "Reference" "U5"
+			(at 189.8081 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "IR2101"
+			(at 189.8081 27.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+			(at 186.69 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/dgdl/ir2101.pdf?fileId=5546d462533600a4015355c7a755166c"
+			(at 186.69 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "High and Low Side Driver, 600V, 210/360mA, PDIP-8/SOIC-8"
+			(at 186.69 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "43204c96-88cd-4c7a-a67d-23aec3c3bf16")
+		)
+		(pin "1"
+			(uuid "3c7ae6e9-55ae-4fb5-8f96-9c5f0d70c025")
+		)
+		(pin "3"
+			(uuid "af51bd4c-9ab4-4c8c-9a64-915167d62d71")
+		)
+		(pin "2"
+			(uuid "31093c76-18d0-4770-9f33-621cd0dc47db")
+		)
+		(pin "8"
+			(uuid "ea82e1e3-1198-4e20-a36a-6b5c67d7a528")
+		)
+		(pin "5"
+			(uuid "22babfb6-4e7e-4261-9c0b-276591809bcd")
+		)
+		(pin "6"
+			(uuid "dac876f0-775a-498f-877c-59f0f7c00b19")
+		)
+		(pin "7"
+			(uuid "f03a8af7-75f2-42b9-adb7-899314065037")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 19.05 16.51 270)
 		(unit 1)
@@ -2940,7 +5679,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 19.05 14.732 90)
 			(hide yes)
 			(show_name no)
@@ -2983,6 +5722,188 @@
 			(project "CarEngine"
 				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
 					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GDS")
+		(at 163.83 34.29 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e43b5993-b756-4273-b923-f2dd12af2943")
+		(property "Reference" "Q5"
+			(at 163.83 25.4 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Q_NMOS_GDS"
+			(at 163.83 27.94 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+			(at 161.29 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 163.83 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/drain/source"
+			(at 163.83 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f8c596ce-3503-44f9-8ce2-e7a7fa71a8a5")
+		)
+		(pin "2"
+			(uuid "1b8429fc-ce3d-4d90-886f-5ff226acdc22")
+		)
+		(pin "3"
+			(uuid "d8f44374-00ed-4b0b-aabb-94c7273f483e")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "Q5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Driver_FET:IR2101")
+		(at 161.29 71.12 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "faeb2e0e-6856-4106-bcb2-5b36a1bce9d1")
+		(property "Reference" "U6"
+			(at 176.53 65.6746 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "IR2101"
+			(at 176.53 68.2146 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+			(at 161.29 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/dgdl/ir2101.pdf?fileId=5546d462533600a4015355c7a755166c"
+			(at 161.29 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "High and Low Side Driver, 600V, 210/360mA, PDIP-8/SOIC-8"
+			(at 161.29 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "0eb80090-3990-4a4f-9f5d-05bc639f038f")
+		)
+		(pin "1"
+			(uuid "92ac19c2-67dc-4e21-be4a-c7bc04e6b573")
+		)
+		(pin "3"
+			(uuid "73c6b117-0cec-4c95-8007-948c1bd9c3a1")
+		)
+		(pin "2"
+			(uuid "42391fbb-a0b5-4a45-9314-f5c070eb7f4b")
+		)
+		(pin "8"
+			(uuid "47023580-07ba-431c-acdb-8e3f36104f2b")
+		)
+		(pin "5"
+			(uuid "11a5646e-de32-4371-a96a-31d5b9edc803")
+		)
+		(pin "6"
+			(uuid "2280a04b-ecdf-4f12-9210-3eb38dfda38d")
+		)
+		(pin "7"
+			(uuid "0e205039-5388-481e-81e4-182a9a0c2a65")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -3061,6 +5982,89 @@
 			(project "CarEngine"
 				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GDS")
+		(at 151.13 34.29 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fde7021e-6423-487d-9170-3b06527327e4")
+		(property "Reference" "Q3"
+			(at 151.13 25.4 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Q_NMOS_GDS"
+			(at 151.13 27.94 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+			(at 148.59 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/drain/source"
+			(at 151.13 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "45d98793-f9ba-4970-953b-4caf83a5694c")
+		)
+		(pin "2"
+			(uuid "94145a98-4264-4021-b807-7c4897dac695")
+		)
+		(pin "3"
+			(uuid "b362ebd0-945a-44d9-a8ec-6f8e2ec4b139")
+		)
+		(instances
+			(project "CarEngine"
+				(path "/78e8c889-ae85-45b3-a885-0093678a8d51"
+					(reference "Q3")
 					(unit 1)
 				)
 			)
