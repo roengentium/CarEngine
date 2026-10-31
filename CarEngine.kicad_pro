@@ -511,6 +511,24 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "clearance": 0.2,
+        "name": "Logic",
+        "pcb_color": "rgb(209, 43, 42)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3,
+        "tuning_profile": ""
+      },
+      {
+        "clearance": 1.2,
+        "name": "Power",
+        "pcb_color": "rgb(57, 255, 39)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 3.0,
+        "tuning_profile": ""
       }
     ],
     "meta": {
