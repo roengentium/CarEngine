@@ -1,0 +1,13 @@
+Ref,Function,Candidate part / spec,Qty,Notes
+Q1-Q4,Primary full-bridge FETs (Leaf range),650 V SiC or superjunction MOSFET (e.g. 650 V, <=60 mOhm),4,Vds >= 524 V; verify Qg for 100 kHz drive
+Q1-Q4 alt,Primary FETs (96 V profile),150 V N-FET (e.g. 150 V <=15 mOhm),4,Vds >= 143 V
+Q5-Q6,Synchronous rectifier FETs,100 V N-FET <=5 mOhm,2,Vds >= 72 V; ~25 A RMS each
+U2-U3,Gate drivers,Isolated half-bridge/dual gate driver (e.g. UCC21520 class),2,Check isolation rating vs 400 V
+U4,Controller,Phase-shift/LLC controller or ESP32 for bench only,1,ESP32 PWM is bench-grade; add hardware dead-time + fault shutdown
+T1,Power transformer,16:1:1 (Leaf) / 4:1:1 (96 V); >=600 W at 100 kHz,1,Needs reinforced isolation for HV; custom wind or specialist vendor
+L1,Output inductor,~3 uH >=46 A saturation,1,Check core loss at 200 kHz ripple
+C_out,Output capacitors,Low-ESR polymer/ceramic >=134 uF total >=25 V,4,ESR sets ripple
+C_in,HV input capacitors,Film or HV electrolytic ~10 uF >=500 V,2,Leaf range only
+F1,Input fuse,HV DC-rated fuse sized to input current,1,Must be DC-rated for 400 V
+R_bleed,Bleed resistor,Per energy of C_in,1,Discharge to safe voltage in seconds
+U1,Aux supply,Isolated DC-DC for gate/logic from the HV side,1,Replaces CRE1S2412SC

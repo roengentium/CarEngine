@@ -1,0 +1,73 @@
+Ref,Symbol,Value,Footprint
+C1,C,4.7uF 500V film,
+CY1,C,2.2nF Y1 safety cap (PGND-SGND),
+CB1,C,1uF,Capacitor_SMD:C_0805_2012Metric
+CD1,C,1uF,Capacitor_SMD:C_0805_2012Metric
+CV1,C,100nF,Capacitor_SMD:C_0805_2012Metric
+CBLK1,C,1uF 630V film,
+CSN1,C,1nF 100V,
+COUT1,C,100uF 25V polymer,
+CIS1,C,100nF,Capacitor_SMD:C_0805_2012Metric
+CFB1,C,100nF,Capacitor_SMD:C_0805_2012Metric
+CVC1,C,1uF,Capacitor_SMD:C_0805_2012Metric
+C2,C,4.7uF 500V film,
+CB2,C,1uF,Capacitor_SMD:C_0805_2012Metric
+CD2,C,1uF,Capacitor_SMD:C_0805_2012Metric
+CV2,C,100nF,Capacitor_SMD:C_0805_2012Metric
+CSN2,C,1nF 100V,
+COUT2,C,100uF 25V polymer,
+CVC2,C,10uF 25V,Capacitor_SMD:C_0805_2012Metric
+COUT3,C,100uF 25V polymer,
+COUT4,C,100uF 25V polymer,
+CIN5,C,10uF 25V,Capacitor_SMD:C_0805_2012Metric
+COUT5,C,22uF 10V,Capacitor_SMD:C_0805_2012Metric
+DB1,D,ES1J 600V fast,
+DB2,D,ES1J 600V fast,
+D3,D,Schottky 40V 3A (aux OR-ing),
+D4,D,Schottky 40V 3A (output OR-ing),
+F1,FUSE,"HV DC-rated fuse, ~5 A",
+J1,TB2,VIN 288-403 V DC (96S pack),TerminalBlock:TerminalBlock_bornier-2_P5.08mm
+J2,TB2,AUX 12 V in (start-up/bench),TerminalBlock:TerminalBlock_bornier-2_P5.08mm
+J3,TB2,VOUT 14 V / 36 A (heavy-gauge),
+LR1,L,~10 uH (tune by sim),
+L1,L,"~3 uH, Isat >= 46 A",
+Q1,NMOS,"650V SiC/SJ N-FET, <=60 mohm",Package_TO_SOT_THT:TO-247-3_Vertical
+Q2,NMOS,"650V SiC/SJ N-FET, <=60 mohm",Package_TO_SOT_THT:TO-247-3_Vertical
+Q3,NMOS,"650V SiC/SJ N-FET, <=60 mohm",Package_TO_SOT_THT:TO-247-3_Vertical
+Q4,NMOS,"650V SiC/SJ N-FET, <=60 mohm",Package_TO_SOT_THT:TO-247-3_Vertical
+Q5,NMOS,"100V N-FET, <=5 mohm",Package_TO_SOT_THT:TO-220-3_Vertical
+Q6,NMOS,"100V N-FET, <=5 mohm",Package_TO_SOT_THT:TO-220-3_Vertical
+RBL1,R,100k 3W (>=400V rated) x2 in series,
+RG1,R,4.7R,Resistor_SMD:R_0805_2012Metric
+RGS1,R,10k,Resistor_SMD:R_0805_2012Metric
+RSN1,R,10R 1W,
+RSH1,R,2mR 3W shunt,
+RPD1,R,10k pulldown,Resistor_SMD:R_0805_2012Metric
+RDIS1,R,10k pullup (default = drivers disabled),Resistor_SMD:R_0805_2012Metric
+RFB1,R,47k,Resistor_SMD:R_0805_2012Metric
+RNTC1,R,10k NTC (on heatsink),
+RBL2,R,100k 3W (>=400V rated) x2 in series,
+RG2,R,4.7R,Resistor_SMD:R_0805_2012Metric
+RGS2,R,10k,Resistor_SMD:R_0805_2012Metric
+RSN2,R,10R 1W,
+RPD2,R,10k pulldown,Resistor_SMD:R_0805_2012Metric
+RFB2,R,10k,Resistor_SMD:R_0805_2012Metric
+RT2,R,10k,Resistor_SMD:R_0805_2012Metric
+RG3,R,4.7R,Resistor_SMD:R_0805_2012Metric
+RGS3,R,10k,Resistor_SMD:R_0805_2012Metric
+RPD3,R,10k pulldown,Resistor_SMD:R_0805_2012Metric
+RG4,R,4.7R,Resistor_SMD:R_0805_2012Metric
+RGS4,R,10k,Resistor_SMD:R_0805_2012Metric
+RPD4,R,10k pulldown,Resistor_SMD:R_0805_2012Metric
+RG5,R,4.7R,Resistor_SMD:R_0805_2012Metric
+RPD5,R,10k pulldown,Resistor_SMD:R_0805_2012Metric
+RG6,R,4.7R,Resistor_SMD:R_0805_2012Metric
+RPD6,R,10k pulldown,Resistor_SMD:R_0805_2012Metric
+T1,XFMR_CT,"Np:Ns:Ns = 16:1:1, 600 W / 100 kHz, reinforced isolation",
+U1,ESP32,ESP32 dev module (bench controller),
+U2,ISO_DRV_DUAL,"UCC21520-class, reinforced iso",Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm
+U3,ISO_DRV_DUAL,"UCC21520-class, reinforced iso",Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm
+U4,UCC27524,UCC27524,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm
+U5,BUCK,14V->3.3V buck (e.g. AP63203),
+U6,ISO_DCDC,"Isolated 14V->15V, >=1W, reinforced, >=3 kV",
+U7,INA180,INA180A1 (20 V/V),
