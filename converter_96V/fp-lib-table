@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "CarEngineGen")(type "KiCad")(uri "${KIPRJMOD}/CarEngineGen.pretty")(options "")(descr "Generated footprints for this project"))
+)

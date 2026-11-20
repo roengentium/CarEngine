@@ -1,34 +1,26 @@
-# Converter schematics (96 V prototype + Leaf-pack version)
+# Converter schematics + PCBs (rev B)
 
-Folders: `converter_96V/` and `converter_Leaf400V/` - each has the .kicad_sch, a minimal .kicad_pro, a netlist table and a BOM.
-Regenerate both with `python3 tools/gen_schematics.py <output_dir>`.
+Folders `converter_96V/` and `converter_Leaf400V/` each contain: `.kicad_sch`, `.kicad_pcb`, `.kicad_pro`, `fp-lib-table`, `CarEngineGen.pretty/` (footprints), netlist, BOM, and `*_placement.png`.
+Open the `.kicad_pcb` or `.kicad_sch` from inside its own folder so `${KIPRJMOD}` finds the footprint library.
+Regenerate: copy your `CarEngine.kicad_pcb` next to the script (used as the KiCad-10 file header) and run `python3 tools/gen_converter.py <output_dir>`.
 
-## Architecture (same in both, only ratings/values differ)
-Isolated full-bridge, centre-tapped secondary, synchronous rectification, 14 V / ~36 A / 500 W, 100 kHz.
-- Primary: Q1-Q4 full bridge, Lr + blocking cap, T1.
-- Secondary: Q5/Q6 sync rectifiers, L1 + output caps, 2 mohm shunt + current-sense amp.
-- Controller (ESP32) on the 14 V side, drives the primary FETs through two isolated gate drivers; isolated 15 V bias (U6) feeds the primary side.
-- Start-up needs 12 V on J2 (bench supply, or a vehicle 12 V battery via fused lead, mind the Leaf negative-post sensor rule); afterwards the output keeps the controller alive via D4.
-- Default state is safe: drivers disabled by a pull-up on DRV_DIS, PWM/SR lines pulled low.
+## What changed since rev A
+- Hardware over-current protection: LM393 comparator (U8) trips at ~1.8 V on ISENSE (~45 A); the fault pulls EN_G low through D5, Q8 turns off, DRV_DIS goes high and the drivers shut down. The MCU can also read OCP_N.
+- Real UCC21520DW pinout (checked against TI SLUSCJ9): both VCCI pins, DT pin with RDT/CDT dead-time network, DIS bypass, bootstrap diode + series resistor.
+- Real INA180A1 pinout, RECOM R-78E3.3-0.5 style 3.3 V regulator, ESP32 DevKitC header pin numbers.
+- Input TVS (D6), sync-rect and bridge gate pull-downs, 6 PWM/SR pull-downs.
+- Every symbol now has a real footprint (project-local library), and the PCB references the same symbols by UUID.
 
-| | 96 V | Leaf pack |
-|---|---|---|
-| Input | 82-110 V | 288-403 V |
-| Ratio | 4:1:1 | 16:1:1 |
-| Primary FETs | 150 V, TO-220 | 650 V SiC/SJ, TO-247 |
-| Bootstrap diode | 200 V fast | 600 V fast |
-| Fuse / bleed / caps | 10 A, 100k, 47 uF 150 V | HV DC fuse, 2x100k, 4.7 uF 500 V film |
+## PCB status (honest)
+- Placed, not routed. 88/89 footprints on the board with nets assigned, outline, 4 mounting holes, barrier marking, and region outlines on Dwgs.User. Placement check: no courtyard overlaps, everything inside the board.
+- Board size: 96 V 170x126 mm, Leaf 200x140 mm, 2 layers. Primary left, secondary right, barrier in the middle; T1, U2/U3 (UCC21520), U6 (bias module), CY1 (Y-cap) straddle it by design.
+- To do in KiCad: draw B.Cu zones (PGND on the primary half, SGND on the secondary half), set net classes (wide tracks for VBUS, SW*, SEC*, VOUT*; clearance rules for the HV nets), route, run DRC. 36 A nets (SEC_CT, VOUT_RAW, VOUT, SGND) need heavy copper or bus bars, not normal traces.
+- Primary<->secondary spacing: bare regions are 4 mm (96 V) / 10 mm (Leaf) apart. Package-limited crossings: UCC21520DW pads 7.3 mm apart (package creepage spec is 8 mm: verify), bias module and Y-cap as listed in the check output. The Leaf board needs a proper creepage/clearance review for your applicable standard before any HV test.
+- Placement is a functional first pass (gate drive near drivers, sync-rect near T1); tighten the switching loops during layout.
 
-## What was checked and what was not
-- Checked in Python: balanced s-expressions, every pin assigned a net, no single-pin nets, no duplicate refs (71 / 72 parts, 43 / 44 nets).
-- NOT checked: KiCad was not available here, so neither file has been opened in KiCad, ERC'd or simulated. Expect to fix small things on first open. If KiCad complains about the .kicad_pro, delete it and open the .kicad_sch directly.
-- Connectivity is by net label on a short wire at every pin; layout is a plain column grid, not a polished drawing.
-- Symbols are generic boxes (`CarEngineGen:`). Pin numbers on the isolated driver, bias block, regulator and sense amp are placeholders: map them to the real datasheets and add footprints before PCB work.
-- No PCB was made. HV creepage/clearance, isolation barrier layout and thermal design need a proper layout stage.
-
-## Known open items
-1. Hardware over-current latch into DRV_DIS (firmware-only protection is not enough).
-2. Phase-shift/ZVS timing and Lr value need simulation (LTspice or similar) before power-up.
-3. Sync-rectifier timing from the ESP32 is delicate: begin with SR1/SR2 held low (body diodes only, low power).
-4. Pre-charge and contactors belong on the pack side; this board assumes a pre-charged, fused input.
-5. Input OVP/UVLO and a secondary-side input-voltage monitor are not drawn.
+## Placeholders you must resolve
+- T1 (custom transformer), L1, Lr, film caps, F1: footprints are generic pad patterns.
+- U6 isolated bias module: pad order is a placeholder; match the module you pick.
+- ESP32 footprint assumes a 38-pin DevKitC-style board with 25.4 mm row spacing; check yours.
+- NC_CMP2 (second comparator output) is intentionally unconnected: expect an ERC note.
+- Nothing here has been opened in KiCad, ERC'd, DRC'd or simulated. The `.kicad_pro` is minimal: if it misbehaves, delete it and let KiCad create one.

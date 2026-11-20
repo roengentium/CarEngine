@@ -1,73 +1,90 @@
-Ref,Symbol,Value,Footprint
-C1,C,4.7uF 500V film,
-CY1,C,2.2nF Y1 safety cap (PGND-SGND),
-CB1,C,1uF,Capacitor_SMD:C_0805_2012Metric
-CD1,C,1uF,Capacitor_SMD:C_0805_2012Metric
-CV1,C,100nF,Capacitor_SMD:C_0805_2012Metric
-CBLK1,C,1uF 630V film,
-CSN1,C,1nF 100V,
-COUT1,C,100uF 25V polymer,
-CIS1,C,100nF,Capacitor_SMD:C_0805_2012Metric
-CFB1,C,100nF,Capacitor_SMD:C_0805_2012Metric
-CVC1,C,1uF,Capacitor_SMD:C_0805_2012Metric
-C2,C,4.7uF 500V film,
-CB2,C,1uF,Capacitor_SMD:C_0805_2012Metric
-CD2,C,1uF,Capacitor_SMD:C_0805_2012Metric
-CV2,C,100nF,Capacitor_SMD:C_0805_2012Metric
-CSN2,C,1nF 100V,
-COUT2,C,100uF 25V polymer,
-CVC2,C,10uF 25V,Capacitor_SMD:C_0805_2012Metric
-COUT3,C,100uF 25V polymer,
-COUT4,C,100uF 25V polymer,
-CIN5,C,10uF 25V,Capacitor_SMD:C_0805_2012Metric
-COUT5,C,22uF 10V,Capacitor_SMD:C_0805_2012Metric
-DB1,D,ES1J 600V fast,
-DB2,D,ES1J 600V fast,
-D3,D,Schottky 40V 3A (aux OR-ing),
-D4,D,Schottky 40V 3A (output OR-ing),
-F1,FUSE,"HV DC-rated fuse, ~5 A",
-J1,TB2,VIN 288-403 V DC (96S pack),TerminalBlock:TerminalBlock_bornier-2_P5.08mm
-J2,TB2,AUX 12 V in (start-up/bench),TerminalBlock:TerminalBlock_bornier-2_P5.08mm
-J3,TB2,VOUT 14 V / 36 A (heavy-gauge),
-LR1,L,~10 uH (tune by sim),
-L1,L,"~3 uH, Isat >= 46 A",
-Q1,NMOS,"650V SiC/SJ N-FET, <=60 mohm",Package_TO_SOT_THT:TO-247-3_Vertical
-Q2,NMOS,"650V SiC/SJ N-FET, <=60 mohm",Package_TO_SOT_THT:TO-247-3_Vertical
-Q3,NMOS,"650V SiC/SJ N-FET, <=60 mohm",Package_TO_SOT_THT:TO-247-3_Vertical
-Q4,NMOS,"650V SiC/SJ N-FET, <=60 mohm",Package_TO_SOT_THT:TO-247-3_Vertical
-Q5,NMOS,"100V N-FET, <=5 mohm",Package_TO_SOT_THT:TO-220-3_Vertical
-Q6,NMOS,"100V N-FET, <=5 mohm",Package_TO_SOT_THT:TO-220-3_Vertical
-RBL1,R,100k 3W (>=400V rated) x2 in series,
-RG1,R,4.7R,Resistor_SMD:R_0805_2012Metric
-RGS1,R,10k,Resistor_SMD:R_0805_2012Metric
-RSN1,R,10R 1W,
-RSH1,R,2mR 3W shunt,
-RPD1,R,10k pulldown,Resistor_SMD:R_0805_2012Metric
-RDIS1,R,10k pullup (default = drivers disabled),Resistor_SMD:R_0805_2012Metric
-RFB1,R,47k,Resistor_SMD:R_0805_2012Metric
-RNTC1,R,10k NTC (on heatsink),
-RBL2,R,100k 3W (>=400V rated) x2 in series,
-RG2,R,4.7R,Resistor_SMD:R_0805_2012Metric
-RGS2,R,10k,Resistor_SMD:R_0805_2012Metric
-RSN2,R,10R 1W,
-RPD2,R,10k pulldown,Resistor_SMD:R_0805_2012Metric
-RFB2,R,10k,Resistor_SMD:R_0805_2012Metric
-RT2,R,10k,Resistor_SMD:R_0805_2012Metric
-RG3,R,4.7R,Resistor_SMD:R_0805_2012Metric
-RGS3,R,10k,Resistor_SMD:R_0805_2012Metric
-RPD3,R,10k pulldown,Resistor_SMD:R_0805_2012Metric
-RG4,R,4.7R,Resistor_SMD:R_0805_2012Metric
-RGS4,R,10k,Resistor_SMD:R_0805_2012Metric
-RPD4,R,10k pulldown,Resistor_SMD:R_0805_2012Metric
-RG5,R,4.7R,Resistor_SMD:R_0805_2012Metric
-RPD5,R,10k pulldown,Resistor_SMD:R_0805_2012Metric
-RG6,R,4.7R,Resistor_SMD:R_0805_2012Metric
-RPD6,R,10k pulldown,Resistor_SMD:R_0805_2012Metric
-T1,XFMR_CT,"Np:Ns:Ns = 16:1:1, 600 W / 100 kHz, reinforced isolation",
-U1,ESP32,ESP32 dev module (bench controller),
-U2,ISO_DRV_DUAL,"UCC21520-class, reinforced iso",Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm
-U3,ISO_DRV_DUAL,"UCC21520-class, reinforced iso",Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm
-U4,UCC27524,UCC27524,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm
-U5,BUCK,14V->3.3V buck (e.g. AP63203),
-U6,ISO_DCDC,"Isolated 14V->15V, >=1W, reinforced, >=3 kV",
-U7,INA180,INA180A1 (20 V/V),
+Ref,Value,Footprint,Qty-note
+C1,4.7uF 500V film,CarEngineGen:FILM_P27.5,
+C2,4.7uF 500V film,CarEngineGen:FILM_P27.5,
+CB1,1uF,CarEngineGen:R0805,
+CB2,1uF,CarEngineGen:R0805,
+CBLK1,1uF 630V film,CarEngineGen:FILM_P22.5,
+CCMP1,100nF,CarEngineGen:R0805,
+CD1,1uF,CarEngineGen:R0805,
+CD2,1uF,CarEngineGen:R0805,
+CDIS1,1nF,CarEngineGen:R0805,
+CDT1,2.2nF,CarEngineGen:R0805,
+CDT2,2.2nF,CarEngineGen:R0805,
+CFB1,100nF,CarEngineGen:R0805,
+CIN5,10uF 25V,CarEngineGen:R0805,
+CIS1,100nF,CarEngineGen:R0805,
+COUT1,100uF 25V polymer,CarEngineGen:CAPR_P3.5,
+COUT2,100uF 25V polymer,CarEngineGen:CAPR_P3.5,
+COUT3,100uF 25V polymer,CarEngineGen:CAPR_P3.5,
+COUT4,100uF 25V polymer,CarEngineGen:CAPR_P3.5,
+COUT5,22uF 10V,CarEngineGen:R0805,
+CSN1,1nF 100V,CarEngineGen:R0805,
+CSN2,1nF 100V,CarEngineGen:R0805,
+CV1,100nF,CarEngineGen:R0805,
+CV2,100nF,CarEngineGen:R0805,
+CVC1,1uF,CarEngineGen:R0805,
+CVC2,10uF 25V,CarEngineGen:R0805,
+CY1,2.2nF Y1 safety cap (PGND-SGND),CarEngineGen:YCAP_P15,
+D3,Schottky 40V 3A (aux OR-ing),CarEngineGen:SMC,
+D4,Schottky 40V 3A (output OR-ing),CarEngineGen:SMC,
+D5,BAT54 (OCP clamp on EN_G),CarEngineGen:SOT23,
+D6,"TVS bidirectional, standoff >=420 V (clamp < 650 V: verify)",CarEngineGen:SMC,
+DB1,ES1J 600V fast,CarEngineGen:SMA,
+DB2,ES1J 600V fast,CarEngineGen:SMA,
+F1,HV DC-rated fuse ~5 A,CarEngineGen:FUSE_P27.5,
+J1,VIN 288-403 V DC (96S pack),CarEngineGen:TB2_P5.08,
+J2,AUX 12 V in (start-up/bench),CarEngineGen:TB2_P5.08,
+J3,VOUT 14 V / 36 A,CarEngineGen:TB2_P7.62_PWR,
+L1,"~3 uH, Isat >= 46 A",CarEngineGen:IND_PWR_P15,
+LR1,~10 uH (tune by sim),CarEngineGen:IND_P12.5,
+Q1,650V SiC/SJ N-FET <=60 mohm (TO-247),CarEngineGen:TO247V,
+Q2,650V SiC/SJ N-FET <=60 mohm (TO-247),CarEngineGen:TO247V,
+Q3,650V SiC/SJ N-FET <=60 mohm (TO-247),CarEngineGen:TO247V,
+Q4,650V SiC/SJ N-FET <=60 mohm (TO-247),CarEngineGen:TO247V,
+Q5,100V N-FET <=5 mohm (TO-220),CarEngineGen:TO220V,
+Q6,100V N-FET <=5 mohm (TO-220),CarEngineGen:TO220V,
+Q8,2N7002 (pulls DRV_DIS low when enabled),CarEngineGen:SOT23,
+RBL1,100k 3W (>=400V) x2 in series,CarEngineGen:RAX_P15,
+RBL2,100k 3W (>=400V) x2 in series,CarEngineGen:RAX_P15,
+RBT1,10R,CarEngineGen:R0805,
+RBT2,10R,CarEngineGen:R0805,
+RDIS1,10k pullup (default = drivers disabled),CarEngineGen:R0805,
+RDT1,"20k (dead time ~ 10 ns/kohm, verify)",CarEngineGen:R0805,
+RDT2,"20k (dead time ~ 10 ns/kohm, verify)",CarEngineGen:R0805,
+RFB1,47k,CarEngineGen:R0805,
+RFB2,10k,CarEngineGen:R0805,
+RFLT1,10k,CarEngineGen:R0805,
+RG1,4.7R,CarEngineGen:R0805,
+RG2,4.7R,CarEngineGen:R0805,
+RG3,4.7R,CarEngineGen:R0805,
+RG4,4.7R,CarEngineGen:R0805,
+RG5,4.7R,CarEngineGen:R0805,
+RG6,4.7R,CarEngineGen:R0805,
+RGEN1,100k,CarEngineGen:R0805,
+RGENS1,1k,CarEngineGen:R0805,
+RGS1,10k,CarEngineGen:R0805,
+RGS2,10k,CarEngineGen:R0805,
+RGS3,10k,CarEngineGen:R0805,
+RGS4,10k,CarEngineGen:R0805,
+RIREF1,8.2k,CarEngineGen:R0805,
+RIREF2,10k,CarEngineGen:R0805,
+RNTC1,10k NTC (on heatsink),CarEngineGen:NTC_P5.08,
+RPD1,10k pulldown,CarEngineGen:R0805,
+RPD2,10k pulldown,CarEngineGen:R0805,
+RPD3,10k pulldown,CarEngineGen:R0805,
+RPD4,10k pulldown,CarEngineGen:R0805,
+RPD5,10k pulldown,CarEngineGen:R0805,
+RPD6,10k pulldown,CarEngineGen:R0805,
+RSH1,2mR 3W shunt,CarEngineGen:R2512,
+RSN1,10R 1W,CarEngineGen:RPWR_P10,
+RSN2,10R 1W,CarEngineGen:RPWR_P10,
+RT2,10k,CarEngineGen:R0805,
+T1,"Np:Ns:Ns = 16:1:1, 600 W / 100 kHz, reinforced isolation",CarEngineGen:XFMR_HV,
+U1,ESP32 dev module (bench controller),CarEngineGen:ESP32_DEVKIT38_R90,
+U2,UCC21520DW (reinforced iso),CarEngineGen:SOIC16W_R180,
+U3,UCC21520DW (reinforced iso),CarEngineGen:SOIC16W_R180,
+U4,UCC27524,CarEngineGen:SOIC8,
+U5,RECOM R-78E3.3-0.5,CarEngineGen:SIP3_P2.54,
+U6,"Isolated 14V->15V >=1W, reinforced >=3 kV",CarEngineGen:ISO4_X12.7,
+U7,INA180A1 (20 V/V),CarEngineGen:SOT23_5,
+U8,LM393 (OCP comparator),CarEngineGen:SOIC8,
