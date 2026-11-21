@@ -1,4 +1,4 @@
-# Netlist: 96 V to 14 V isolated DC-DC (bench/prototype profile)
+# Netlist: 96 V to 14 V isolated DC-DC
 
 | Net | Pins |
 |---|---|
