@@ -225,6 +225,61 @@ def place(cfg,comps):
     missing=[c["ref"] for c in comps if "x" not in c]; assert not missing,missing
     return regions
 
+
+def pour_edge(cfg): return 4.5 if cfg["hv"] else 2.0
+
+def plan_ground_vias(cfg,comps):
+    W,H,cx=cfg["W"],cfg["H"],cfg["cx"]; edge=pour_edge(cfg)
+    pads=[]  # (ref,num,net,rect,smd,cx,cy,w,h)
+    for c in comps:
+        L,R,_,_,_=SYMS[c["sym"]]; n2p={num:pn for pn,num in L+R}
+        for (num,x,y,w,h,s,d) in c["fp"]["pads"]:
+            if num not in n2p: continue
+            net=c["nets"][n2p[num]]; px,py=c["x"]+x,c["y"]+y
+            pads.append(dict(ref=c["ref"],num=num,net=net,rect=(px-w/2,py-h/2,px+w/2,py+h/2),smd=d is None,x=px,y=py,w=w,h=h,ccx=c["x"],ccy=c["y"]))
+    holes=[(5,5),(W-5,5),(5,H-5),(W-5,H-5)]
+    def dist_rect(px,py,r):
+        dx=max(r[0]-px,0,px-r[2]); dy=max(r[1]-py,0,py-r[3]); return math.hypot(dx,dy)
+    vias=[]; stubs=[]; failed=[]
+    for p in pads:
+        if not p["smd"] or p["net"] not in("PGND","SGND"): continue
+        side_lo,side_hi=((1.5,cx-edge-0.6) if p["net"]=="PGND" else (cx+edge+0.6,W-1.5))
+        outx=1 if p["x"]>=p["ccx"] else -1; outy=1 if p["y"]>=p["ccy"] else -1
+        cands=[]
+        for k in range(0,4):
+            dx=p["w"]/2+0.95+0.5*k; dy=p["h"]/2+0.95+0.5*k
+            cands+= [(outx*dx,0),(-outx*dx,0),(0,outy*dy),(0,-outy*dy),(outx*dx,outy*dy*0.0+0)]
+        placed=None
+        for ox,oy in cands:
+            vx,vy=p["x"]+ox,p["y"]+oy
+            if not(side_lo<=vx<=side_hi and 1.5<=vy<=H-1.5): continue
+            if any(math.hypot(vx-hx,vy-hy)<3.2 for hx,hy in holes): continue
+            if any(math.hypot(vx-v[0],vy-v[1])<1.2 for v in vias): continue
+            ok=True
+            for q in pads:
+                if q is p: continue
+                if dist_rect(vx,vy,q["rect"])<0.75: ok=False;break
+            if not ok: continue
+            # stub clearance vs other-net pads
+            for t in range(0,11):
+                sx=p["x"]+(vx-p["x"])*t/10; sy=p["y"]+(vy-p["y"])*t/10
+                for q in pads:
+                    if q is p or q["net"]==p["net"]: continue
+                    if dist_rect(sx,sy,q["rect"])<0.40: ok=False;break
+                if not ok: break
+            if ok: placed=(vx,vy); break
+        if placed: vias.append((placed[0],placed[1],p["net"])); stubs.append((p["x"],p["y"],placed[0],placed[1],p["net"]))
+        else: failed.append((p["ref"],p["num"],p["net"]))
+    return vias,stubs,failed
+
+def zones_sexp(cfg,OX,OY):
+    W,H,cx=cfg["W"],cfg["H"],cfg["cx"]; edge=pour_edge(cfg); clr=2.0 if cfg["hv"] else 0.5
+    out=[]
+    for net,(x0,x1) in (("PGND",(1.0,cx-edge)),("SGND",(cx+edge,W-1.0))):
+        pts=" ".join(f"(xy {OX+x:.3f} {OY+y:.3f})" for x,y in ((x0,1.0),(x1,1.0),(x1,H-1.0),(x0,H-1.0)))
+        out.append(f'\t(zone\n\t\t(net "/{net}")\n\t\t(layer "B.Cu")\n\t\t(uuid "{U()}")\n\t\t(hatch edge 0.5)\n\t\t(connect_pads\n\t\t\t(clearance {clr})\n\t\t)\n\t\t(min_thickness 0.25)\n\t\t(filled_areas_thickness no)\n\t\t(fill yes\n\t\t\t(thermal_gap 0.5)\n\t\t\t(thermal_bridge_width 0.6)\n\t\t)\n\t\t(polygon\n\t\t\t(pts\n\t\t\t\t{pts}\n\t\t\t)\n\t\t)\n\t)\n')
+    return "".join(out)
+
 def pcb_emit(cfg,comps,regions,outdir):
     NAME=cfg["name"]; W,H,cx,gap=cfg["W"],cfg["H"],cfg["cx"],cfg["gap"]
     src=open(""+os.environ.get("PCB_TEMPLATE","CarEngine.kicad_pcb")+"",newline="").read().replace("\r\n","\n")
@@ -245,8 +300,17 @@ def pcb_emit(cfg,comps,regions,outdir):
         o.append(f'\t(gr_rect (start {OX+x0} {OY+y0}) (end {OX+x1} {OY+y1}) (stroke (width 0.15) (type dash)) (fill no) (layer "Dwgs.User") (uuid "{U()}"))\n')
     for txt,x,y in (("PRIMARY (HV) - PGND pour on B.Cu",xp1/2,H-1),("SECONDARY (14 V) - SGND pour on B.Cu",(xs0+W)/2,H-1),("ISOLATION BARRIER",cx,H/2-0.0)):
         o.append(f'\t(gr_text "{txt}" (at {OX+x} {OY+y} {90 if "BARRIER" in txt else 0}) (layer "Dwgs.User") (uuid "{U()}") (effects (font (size 1.5 1.5) (thickness 0.2))))\n')
-    o.append("\t(embedded_fonts no)\n)\n")
-    open(f"{outdir}/{NAME}.kicad_pcb","w").write("".join(o))
+    tail="\t(embedded_fonts no)\n)\n"
+    open(f"{outdir}/{NAME}_nopour_backup.kicad_pcb","w").write("".join(o)+tail)
+    vias,stubs,failed=plan_ground_vias(cfg,comps)
+    pour=[]
+    for (x,y,net) in vias:
+        pour.append(f'\t(via\n\t\t(at {OX+x:.3f} {OY+y:.3f})\n\t\t(size 0.8)\n\t\t(drill 0.4)\n\t\t(layers "F.Cu" "B.Cu")\n\t\t(net "/{net}")\n\t\t(uuid "{U()}")\n\t)\n')
+    for (x1,y1,x2,y2,net) in stubs:
+        pour.append(f'\t(segment\n\t\t(start {OX+x1:.3f} {OY+y1:.3f})\n\t\t(end {OX+x2:.3f} {OY+y2:.3f})\n\t\t(width 0.25)\n\t\t(layer "F.Cu")\n\t\t(net "/{net}")\n\t\t(uuid "{U()}")\n\t)\n')
+    pour.append(zones_sexp(cfg,OX,OY))
+    open(f"{outdir}/{NAME}.kicad_pcb","w").write("".join(o)+"".join(pour)+tail)
+    print(f"  pours: PGND/SGND on B.Cu, {len(vias)} stitch vias to SMD ground pads, failed: {failed or 'none'}")
 
 def checks(cfg,comps):
     W,H=cfg["W"],cfg["H"]; rep=[]
@@ -277,14 +341,17 @@ def preview(cfg,comps,path):
     import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt; from matplotlib.patches import Rectangle
     W,H,cx,gap=cfg["W"],cfg["H"],cfg["cx"],cfg["gap"]
     fig,ax=plt.subplots(figsize=(14,14*H/W)); ax.add_patch(Rectangle((0,0),W,H,fill=False,lw=2))
-    ax.add_patch(Rectangle((cx-gap/2,0),gap,H,color="#ffdddd",alpha=.5))
+    e=pour_edge(cfg)
+    ax.add_patch(Rectangle((1,1),cx-e-1,H-2,fc="#9ecbff",alpha=.30,ec="none")); ax.add_patch(Rectangle((cx+e,1),W-1-cx-e,H-2,fc="#9fe0a0",alpha=.30,ec="none"))
+    ax.add_patch(Rectangle((cx-e,0),2*e,H,color="#ffdddd",alpha=.5))
+    for vx,vy,vn in plan_ground_vias(cfg,comps)[0]: ax.plot(vx,vy,"o",ms=2.5,color="k")
     for c in comps:
         x0,y0,x1,y1=c["fp"]["crt"]; col="#cfe3ff" if is_pri(next(iter(c["nets"].values()))) and c["sec"][0]=="P" else "#d5f5d5"
         if c["sec"]=="X": col="#ffe9b3"
         ax.add_patch(Rectangle((c["x"]+x0,c["y"]+y0),x1-x0,y1-y0,fc=col,ec="k",lw=.5))
         for (num,x,y,w,h,s,d) in c["fp"]["pads"]: ax.add_patch(Rectangle((c["x"]+x-w/2,c["y"]+y-h/2),w,h,fc="#b8860b",ec="none"))
         ax.text(c["x"],c["y"],c["ref"],ha="center",va="center",fontsize=6)
-    ax.set_xlim(-2,W+2); ax.set_ylim(H+2,-2); ax.set_aspect("equal"); ax.set_title(cfg["name"]+" placement (blue=primary, green=secondary, amber=straddles barrier)")
+    ax.set_xlim(-2,W+2); ax.set_ylim(H+2,-2); ax.set_aspect("equal"); ax.set_title(cfg["name"]+": B.Cu pours (blue PGND, green SGND), black dots = ground vias, amber = straddles barrier")
     fig.savefig(path,dpi=110,bbox_inches="tight"); plt.close(fig)
 
 def run(cfg,base,dname):

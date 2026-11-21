@@ -12,9 +12,12 @@ Regenerate: copy your `CarEngine.kicad_pcb` next to the script (used as the KiCa
 - Every symbol now has a real footprint (project-local library), and the PCB references the same symbols by UUID.
 
 ## PCB status (honest)
-- Placed, not routed. 88/89 footprints on the board with nets assigned, outline, 4 mounting holes, barrier marking, and region outlines on Dwgs.User. Placement check: no courtyard overlaps, everything inside the board.
+- **Pours added (rev C):** B.Cu zones PGND (primary half) and SGND (secondary half), 40 stitching vias on each board that tie every SMD ground pad to its pour (short F.Cu stubs, 0.8/0.4 mm vias). THT ground pads connect through thermal reliefs. Pour clearance 0.5 mm (96 V) / 2.0 mm (Leaf). Pour edges sit 2.0 mm (96 V) / 4.5 mm (Leaf) either side of the barrier centreline, so pour-to-pour spacing is 4 / 9 mm.
+- Zones are saved unfilled: in KiCad press **B** (Fill all zones) after opening. The zone block uses KiCad-10 name-based nets; I could not test it in KiCad 10. If KiCad refuses the file, open `*_nopour_backup.kicad_pcb` instead and draw the two zones by hand (polygons are the two region outlines on Dwgs.User).
+- Remaining unrouted: all signal and power nets other than ground (ratsnest only).
+- Placed, ground poured, not routed. 88/89 footprints on the board with nets assigned, outline, 4 mounting holes, barrier marking, and region outlines on Dwgs.User. Placement check: no courtyard overlaps, everything inside the board.
 - Board size: 96 V 170x126 mm, Leaf 200x140 mm, 2 layers. Primary left, secondary right, barrier in the middle; T1, U2/U3 (UCC21520), U6 (bias module), CY1 (Y-cap) straddle it by design.
-- To do in KiCad: draw B.Cu zones (PGND on the primary half, SGND on the secondary half), set net classes (wide tracks for VBUS, SW*, SEC*, VOUT*; clearance rules for the HV nets), route, run DRC. 36 A nets (SEC_CT, VOUT_RAW, VOUT, SGND) need heavy copper or bus bars, not normal traces.
+- To do in KiCad: set net classes (wide tracks for VBUS, SW*, SEC*, VOUT*; clearance rules for the HV nets), route, run DRC. 36 A nets (SEC_CT, VOUT_RAW, VOUT, SGND) need heavy copper or bus bars, not normal traces.
 - Primary<->secondary spacing: bare regions are 4 mm (96 V) / 10 mm (Leaf) apart. Package-limited crossings: UCC21520DW pads 7.3 mm apart (package creepage spec is 8 mm: verify), bias module and Y-cap as listed in the check output. The Leaf board needs a proper creepage/clearance review for your applicable standard before any HV test.
 - Placement is a functional first pass (gate drive near drivers, sync-rect near T1); tighten the switching loops during layout.
 
